@@ -83,7 +83,7 @@ onUnmounted(() => {
       <div class="post-author">
         <div class="avatar">
           <img
-            src="/profile.jpg"
+            src="/profile.png"
             alt="@rioleia.cafe_satoka"
             @error="($event.target as HTMLImageElement).style.display = 'none'"
           />
@@ -97,7 +97,8 @@ onUnmounted(() => {
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
         </svg>
       </div>
-      <p v-if="postText" class="post-text">{{ postText }}</p>
+      <p class="reply-context">正在回覆 @otaku_five5</p>
+      <p class="post-text-static">然後我的拍就丟一邊喔？</p>
     </a>
 
     <!-- Like count hero -->
@@ -274,6 +275,19 @@ body {
   height: 16px;
   color: #555;
   flex-shrink: 0;
+}
+
+.reply-context {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+.post-text-static {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #eee;
 }
 
 .post-text {
