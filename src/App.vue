@@ -83,7 +83,7 @@ onUnmounted(() => {
       <div class="post-author">
         <div class="avatar">
           <img
-            src="/profile.png"
+            src="/profile.jpg"
             alt="@rioleia.cafe_satoka"
             @error="($event.target as HTMLImageElement).style.display = 'none'"
           />
